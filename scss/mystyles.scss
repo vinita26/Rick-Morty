@@ -1,0 +1,58 @@
+$success:blue;
+$text-muted: green;
+$card-spacer-y: 0.8rem;
+
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+.setTbLayout{
+    width: 15%;
+    background-color: yellow;
+}
+.hideIt{
+    visibility: hidden;
+}
+.footerAlignment{
+// margin-bottom: 10%;
+margin-top: 20%;
+margin-right: 5%;
+}
+
+.tableCellBorder{
+    border: 1px solid blue;
+}
+.tableBorder{
+    border: 2px solid black;
+}
+
+.character-card {
+    height: auto;
+    width: 220px;
+    margin: 10px;
+}
+
+.character-img {
+height: 250px;
+width: 200px;
+margin: 10px;
+}
+
+.character-features {
+    width: 200px;
+    margin: -10px;
+}
+
+.character-features-item {
+    font-size: 10px;
+}
+
+.filter-badge {
+  .close {
+    padding-right: $badge-padding-x;
+    padding-left: $badge-padding-x;
+    margin-right: -$badge-padding-x;
+    font-size: inherit;
+    color: inherit;
+    text-shadow: none;
+    
+  }
+}
