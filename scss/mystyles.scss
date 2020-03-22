@@ -24,11 +24,28 @@ margin-right: 5%;
     border: 2px solid black;
 }
 
+.my-header,
+.my-footer {
+ width: 100%;
+}
+
+#card-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#card-area > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+}
 .character-card {
     height: auto;
     width: 220px;
-    margin: 10px;
+    margin: 0;
     position: relative;
+    flex: 1;
+    // min-width: 8rem;
+    // max-width: 12rem;
 }
 
 .card-img-caption .character-img {
@@ -47,9 +64,10 @@ z-index: 0;
    // background: rgba(0, 0, 0, 0.5);
     text-align: center;
     width: 100%;
-    margin: 33% 0;
-    position: absolute;
-    z-index: 1;
+    margin: 0;
+    position: relative;
+    z-index: 10;
+    color: white;
 }
 
 .character-features {
@@ -77,6 +95,30 @@ z-index: 0;
   }
 }
 
-.text-center {
-  text-align: center;
-}
+// Bootstrap 4 breakpoints & gutter
+// $grid-breakpoints: (
+//     xs: 0,
+//     sm: 576px,
+//     md: 768px,
+//     lg: 992px,
+//     xl: 1200px
+// ) !default;
+
+// $grid-gutter-width: 30px !default;
+
+// // number of cards per line for each breakpoint
+// $cards-per-line: (
+//     xs: 2,
+//     sm: 2,
+//     md: 4,
+//     lg: 4,
+//     xl: 4
+// );
+
+// @each $name, $breakpoint in $grid-breakpoints {
+// 	@media (min-width: $breakpoint) {
+// 		#card-area .my-card .character-card{
+// 			flex: 0 0 calc(#{100/map-get($cards-per-line, $name)}% - #{$grid-gutter-width});
+// 		}
+// 	}
+// }

@@ -19,8 +19,10 @@ module.exports = class DomOperations {
 
                 for (var i = 0; i < myArray.results.length; i++) {
                     let div1 = document.createElement('div');
-                    div1.id = 'my-cards';
-                    div1.style.width = "220px"
+                    div1.className = 'my-card col-12 col-md-3';
+                    div1.style.width = "240px"
+
+                    // var div1 = document.getElementById('card-area');
 
                     let data = myArray.results[i];
 
@@ -33,7 +35,7 @@ module.exports = class DomOperations {
                     let charOrigin = data.origin.name.split('(')[0].trim();
                     let charLastLocation = data.location.name.split('(')[0].trim();
 
-                    var cardContent = '<div class="character-card bg-dark"><div class="icard-img-caption"><img class="card-img-top character-img" src=' + charImageURL + ' alt = "Card image cap"></img> <div class="char-title">' + cardTitle + '</div></div><div class="card-body" > <ul class="list-group list-group-flush bg-secondary character-features"> <li class="list-group-item bg-secondary character-features-item" style="border: none;"> <strong>STATUS</strong> <div class="text-warning character-features-value">' + charStatus + '</div> </li> <li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>SPECIES</strong><span class="list-group text-warning character-features-value">' + charSpecies + '</span></li> <li class="list-group-item bg-secondary character-features-item" style="border: none"><strong>GENDER</strong><span class="list-group text-warning character-features-value">' + charGender + '</span> </li>  <li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>ORIGIN</strong> <span class="list-group text-warning character-features-value">' + charOrigin + '</li><li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>LAST LOCATION</strong> <span class="list-group text-warning character-features-value"}>' + charLastLocation + '</span> </li > </ul ></div ></div > ';
+                    var cardContent = '<div class="character-card bg-dark my-3"><div class="card-img-caption"><img class="card-img-top character-img" src=' + charImageURL + ' alt = "Card image cap"></img> <div class="char-title">' + cardTitle + '</div></div><div class="card-body" > <ul class="list-group list-group-flush bg-secondary character-features"> <li class="list-group-item bg-secondary character-features-item" style="border: none;"> <strong>STATUS</strong> <div class="text-warning character-features-value">' + charStatus + '</div> </li> <li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>SPECIES</strong><span class="list-group text-warning character-features-value">' + charSpecies + '</span></li> <li class="list-group-item bg-secondary character-features-item" style="border: none"><strong>GENDER</strong><span class="list-group text-warning character-features-value">' + charGender + '</span> </li>  <li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>ORIGIN</strong> <span class="list-group text-warning character-features-value">' + charOrigin + '</li><li class="list-group-item bg-secondary character-features-item" style="border: none"> <strong>LAST LOCATION</strong> <span class="list-group text-warning character-features-value"}>' + charLastLocation + '</span> </li > </ul ></div ></div > ';
 
                     div1.innerHTML = cardContent;
                     parent.appendChild(div1);
