@@ -5,14 +5,14 @@ const $gitOps = new GitOperations();
 // const InvokeRecast = require('./../services/recastOperations.js');
 // const $reCast = new InvokeRecast();
 
-module.exports = $(document).ready(function () {
+// module.exports = $(document).ready(function () {
 
-    $('#userTextBox').keyup(function (e) {
-        var code = (e.keyCode ? e.keyCode : e.which);
-        if (code == 13) {
-            //$reCast.invokeReact();
-        }
-    });
+    // $('#userTextBox').keyup(function (e) {
+    //     var code = (e.keyCode ? e.keyCode : e.which);
+    //     if (code == 13) {
+    //         //$reCast.invokeReact();
+    //     }
+    // });
 
 
     //Buttton Click Events
@@ -39,4 +39,4 @@ module.exports = $(document).ready(function () {
 
     // });
 
-})
+//})

@@ -16,23 +16,20 @@ module.exports = class GitOperations {
                 //debugger;
                 statusCode = response.status;
                 if (response.ok) {
-                    console.log('data', response.clone().json())
+                    console.log('data:', response.clone().json())
                     return response.clone().json();
                 } else {
                     //debugger;
                     $domOp.setResponseInWidget(objData.operation, myArray, statusCode);
-                    // throw new Error('No response found');
                 }
             })
             .then((jsonData) => {
                 myArray = jsonData;
                 console.log('array', myArray)
                 console.log('value', myArray.results[0].name)
-                return myArray;
-                //$domOp.setResponseInWidget(objData.operation, myArray, statusCode);
+                $domOp.createCharaterCards(myArray, statusCode);
             })
             .catch((err) => {
-                //debugger;
                 console.log("Error:", err.message);
             })
     }

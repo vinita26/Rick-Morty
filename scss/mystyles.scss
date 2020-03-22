@@ -28,12 +28,28 @@ margin-right: 5%;
     height: auto;
     width: 220px;
     margin: 10px;
+    position: relative;
 }
 
-.character-img {
+.card-img-caption .character-img {
 height: 250px;
 width: 200px;
 margin: 10px;
+z-index: 0;
+}
+
+.card-img-caption {
+  border-top-left-radius: calc(.25rem - 1px);
+  border-top-right-radius: calc(.25rem - 1px);
+}
+
+.card-img-caption .char-title {
+   // background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    margin: 33% 0;
+    position: absolute;
+    z-index: 1;
 }
 
 .character-features {
@@ -43,6 +59,10 @@ margin: 10px;
 
 .character-features-item {
     font-size: 10px;
+}
+
+.character-features-value {
+    text-align: right;
 }
 
 .filter-badge {
@@ -55,4 +75,8 @@ margin: 10px;
     text-shadow: none;
     
   }
+}
+
+.text-center {
+  text-align: center;
 }

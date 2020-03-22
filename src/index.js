@@ -8,7 +8,7 @@ require('./eventHandlers/eventListener.js');
 const GitOperations = require('./services/gitOperations.js');
 const $gitOps = new GitOperations();
 var value1 = $gitOps.processFetchApiWithGet();
-
+console.log('value1:', value1)
 
 $('#userTextBox').keyup(function (e) {      //Moved to eventListener.js
     var code = (e.keyCode ? e.keyCode : e.which);
