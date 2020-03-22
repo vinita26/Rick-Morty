@@ -27,7 +27,6 @@ module.exports = class DomOperations {
                     let data = myArray.results[i];
 
                     let cardTitle = data.name;
-                    console.log('card tite', cardTitle)
                     let charImageURL = data.image;
                     let charStatus = data.status;
                     let charSpecies = data.species;

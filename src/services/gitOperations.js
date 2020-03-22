@@ -6,12 +6,14 @@ const url = 'https://rickandmortyapi.com/api/character/';
 
 module.exports = class GitOperations {
     //results[0].name
-    processFetchApiWithGet() {
+    processFetchApiWithGet(passedURL) {
+        console.log('in git op url', url)
         //debugger;
         var statusCode;
         var myArray = [];
+        var myURL = passedURL ? passedURL : url;
 
-        fetch(url)
+        fetch(myURL)
             .then((response) => {
                 //debugger;
                 statusCode = response.status;
