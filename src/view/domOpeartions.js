@@ -6,10 +6,6 @@ module.exports = class DomOperations {
             console.log('characterCards', characterCards)
             console.log('characterCards.length', characterCards.length)
             var parent = document.getElementById('card-area');
-            // for (var i = 1; i < characterCards.length; i++) {
-            //     parent.removeChild(characterCards[i]);
-            // }
-            debugger;
             parent.innerHTML = '';
         }
     }

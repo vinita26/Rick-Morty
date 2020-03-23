@@ -26,10 +26,16 @@ function findCharacterByGivenName() {
 
 
 document.getElementById('sort-ascending').addEventListener('click', sortDataInAscendingID);
-// document.getElementById('sort-descending').addEventListener('click', sortDataInDescendingID);
+document.getElementById('sort-descending').addEventListener('click', sortDataInDescendingID);
 
 function sortDataInAscendingID() {
-    $domOps.createCharacterCards(charCollection, 200);
-    console.log('inside sort', '')
-    console.log('index myaray', myArray);
+    // $domOps.createCharacterCards(charCollection, 200);
+    let query = "sort=id:asc";
+    $apiOps.processFetchApiWithGet(query);
+}
+
+function sortDataInDescendingID() {
+    // $domOps.createCharacterCards(charCollection, 200);
+    let query = "sort=  id:desc";
+    $apiOps.processFetchApiWithGet(query);
 }
