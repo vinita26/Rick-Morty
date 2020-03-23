@@ -15,7 +15,7 @@ $('#userTextBox').keyup(function (e) {      //Moved to eventListener.js
         var command = document.getElementById('userTextBox').value;    //Moved to recastOperations.js
         var text = { "text": command };
         console.log('text', text)
-        var url = "https://rickandmortyapi.com/api/character/?page=2&name=" + text;
+        var url = "https://rickandmortyapi.com/api/character/?page=2&name=rick";
         console.log('url', url)
         $gitOps.processFetchApiWithGet(url);
         var bodyRelevant = '';

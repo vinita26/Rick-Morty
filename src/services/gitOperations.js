@@ -8,6 +8,7 @@ module.exports = class GitOperations {
     //results[0].name
     processFetchApiWithGet(passedURL) {
         console.log('in git op url', url)
+        console.log('in git op passedurl', passedURL)
         //debugger;
         var statusCode;
         var myArray = [];
