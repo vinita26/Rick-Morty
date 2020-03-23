@@ -10,7 +10,7 @@ const $apiOps = new APIOperations();
 // var text = document.getElementById("userTextBox").value;
 // console.log('text value', text);
 //var url = "https://rickandmortyapi.com/api/character/?page=2&name=rick";
-document.getElementById('userTextBox').addEventListener('click', $gitOps.processFetchApiWithGet());
+document.getElementById('userTextBox').addEventListener('click', $apiOps.processFetchApiWithGet());
 
 
 
