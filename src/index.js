@@ -19,16 +19,17 @@ searchButton.addEventListener('click', findCharacterByGivenName);
 
 function findCharacterByGivenName() {
     const textValue = document.getElementById('searchBoxInput').value;
+    let query = "name=" + textValue;
     $domOps.emptyScreenCards();
-    $apiOps.processFetchApiWithGet(textValue);
+    $apiOps.processFetchApiWithGet(query);
 }
 
 
-// document.getElementById('sort-ascending').addEventListener('click', sortDataInAscendingID);
+document.getElementById('sort-ascending').addEventListener('click', sortDataInAscendingID);
 // document.getElementById('sort-descending').addEventListener('click', sortDataInDescendingID);
 
-// function sortDataInAscendingID() {
-//     domOperations.createCharacterCards(charCollection, 200);
-//     console.log('inside sort', '')
-//     console.log('index myaray', myArray);
-// }
+function sortDataInAscendingID() {
+    $domOps.createCharacterCards(charCollection, 200);
+    console.log('inside sort', '')
+    console.log('index myaray', myArray);
+}

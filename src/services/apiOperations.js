@@ -7,13 +7,13 @@ let url = 'https://rickandmortyapi.com/api/character/';
 
 module.exports = class APIOperations {
 
-    processFetchApiWithGet(textValue) {
+    processFetchApiWithGet(query) {
 
         var statusCode;
         var myArray = [];
-        console.log('textvalue', textValue)
-        if (textValue) {
-            url = "https://rickandmortyapi.com/api/character/?page=2&name=" + textValue;
+        console.log('textvalue', query)
+        if (query) {
+            url = "https://rickandmortyapi.com/api/character/?page=1&" + query;
             console.log('url with text', url);
         }
 
