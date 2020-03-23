@@ -1,28 +1,34 @@
-//const RequestHandler = require("./requestHandler.js");
-
 import './../scss/mystyles.scss';
 import './../css/mystyles.css';
 
 
 const APIOperations = require('./services/apiOperations.js');
 const $apiOps = new APIOperations();
-$apiOps.processFetchApiWithGet()
 
-let searchBox = document.getElementById("searchBoxInput");
+const DOMOperations = require('./view/domOpeartions');
+const $domOps = new DOMOperations();
 
-//let text = document.getElementById('userTextBox').value;
-// const text = document.getElementById('userTextBox').value;
+let charCollection = $apiOps.processFetchApiWithGet();
+
+let searchButton = document.getElementById("search-button");
+const textValue = document.getElementById('searchBoxInput').value;
 
 // console.log('text value', text);
 //var url = "https://rickandmortyapi.com/api/character/?page=2&name=" + text;
-searchBox.addEventListener('click', $apiOps.processFetchApiWithGet());
-// searchBox.addEventListener('input', alert(text));
+searchButton.addEventListener('click', findCharacterByGivenName);
 
-// $('#userTextBox').keyup(function (e) {
-//     // var code = (e.keyCode ? e.keyCode : e.which);
-//     // if (code == 13) {
-//     //     $apiOps.processFetchApiWithGet();
-//     // }
-//     $apiOps.processFetchApiWithGet();
-// });
+function findCharacterByGivenName() {
+    const textValue = document.getElementById('searchBoxInput').value;
+    $domOps.emptyScreenCards();
+    $apiOps.processFetchApiWithGet(textValue);
+}
 
+
+// document.getElementById('sort-ascending').addEventListener('click', sortDataInAscendingID);
+// document.getElementById('sort-descending').addEventListener('click', sortDataInDescendingID);
+
+// function sortDataInAscendingID() {
+//     domOperations.createCharacterCards(charCollection, 200);
+//     console.log('inside sort', '')
+//     console.log('index myaray', myArray);
+// }
