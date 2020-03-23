@@ -1,11 +1,16 @@
 
-const DomOperations = require('./../view/domOpeartions.js');
+const DomOperations = require('../view/domOpeartions.js');
 const $domOp = new DomOperations();
 
 const url = 'https://rickandmortyapi.com/api/character/';
 
-module.exports = class GitOperations {
-    //results[0].name
+
+
+var text = document.getElementById("userTextBox").value;
+console.log('text value', text);
+
+module.exports = class APIOperations {
+
     processFetchApiWithGet(passedURL) {
         console.log('in git op url', url)
         console.log('in git op passedurl', passedURL)
@@ -29,7 +34,6 @@ module.exports = class GitOperations {
             .then((jsonData) => {
                 myArray = jsonData;
                 console.log('array', myArray)
-                console.log('value', myArray.results[0].name)
                 $domOp.createCharaterCards(myArray, statusCode);
             })
             .catch((err) => {
